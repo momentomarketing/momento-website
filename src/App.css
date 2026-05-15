@@ -1,0 +1,145 @@
+.page {
+  min-height: 100vh;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav,
+.hero,
+.work,
+.about,
+.contact {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.wordmark,
+.nav-link,
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wordmark {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  color: #5d5d5d;
+  font-size: 0.9rem;
+}
+
+main {
+  flex: 1;
+}
+
+.hero {
+  padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.25rem);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.hero h1 {
+  max-width: 14ch;
+  margin: 0.9rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.lede {
+  max-width: 28rem;
+  margin: 0;
+  color: #5d5d5d;
+  font-size: 1rem;
+}
+
+.work {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.project-frame {
+  aspect-ratio: 16 / 10;
+  background: #efefef;
+}
+
+.project-card h2,
+.project-card p,
+.about p,
+.contact p {
+  margin: 0;
+}
+
+.project-card h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 0.92rem;
+}
+
+.about {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.about p {
+  max-width: 28rem;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  color: #666;
+}
+
+.contact a {
+  color: #1f1f1f;
+}
+
+@media (min-width: 760px) {
+  .page {
+    padding: 2rem;
+  }
+
+  .work {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
